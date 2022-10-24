@@ -10,23 +10,23 @@
   <body>
     <h1 class="title">Stuff I need to do</h1>
     <div class="all-tasks">
-        <form action="">
-            <input type="text" class="new list" 
+        <form action="" data-new-list-form>
+            <input type="text" class="new list" data-new-list-input
             placeholder="New List Name..." aria-label="new list name">
             <button class="btn list" aria-label="create new list">+</button>
         </form>
       <h2 class="task-list-title">My Lists</h1>
-            <ul class="task-list">
-                <li class="active-live">YouTube</li>
-                <li>Work</li>
-                <li>Grocery</li>
+            <ul class="task-list" data-lists>
+                <!-- <li class="list-name active-list">YouTube</li>
+                <li class="list-name">Work</li>
+                <li class="list-name">Grocery</li> -->
             </ul>
 
     </div>
-    <div class="todo-list">
+    <div class="todo-list" data-list-display-container>
         <div class="todo-header">
-            <h2 class="list-title">YouTube</h2>
-            <p class="task-count">3 tasks remain</p>
+            <h2 class="list-title" data-list-title>YouTube</h2>
+            <p class="task-count" data-list-count>3 tasks remain</p>
         </div>
         <div class="todo-body">
             <div class="tasks">
@@ -34,11 +34,43 @@
                     <input 
                     type="checkbox"
                     id="task-1">
-                    <label for="task-1">Record To Do List Video</label>
+                    <label for="task-1">
+                        <span class="custom-checkbox">
+                    </span> 
+                    Record To Do List Video</label>
+                </div>
+                <!-- /task1 -->
+                <div class="task">
+                    <input 
+                    type="checkbox"
+                    id="task-2">
+                    <label for="task-2">
+                        <span class="custom-checkbox">
+                    </span> 
+                    Eat</label>
+                </div>
+                <!-- /task2 -->
+                <div class="task">
+                    <input 
+                    type="checkbox"
+                    id="task-3">
+                    <label for="task-3">
+                        <span class="custom-checkbox">
+                    </span> 
+                    Feed Emilio</label>
                 </div>
             </div>
-            <div class="newtask-creator"></div>
-            <div class="delete-stuff"></div>
+            <div class="newtask-creator">
+                <form action="">
+            <input type="text" class="new task" 
+            placeholder="New Task Name..." aria-label="create create new task">
+            <button class="btn task" aria-label="create new task">+</button>
+        </form>
+            </div>
+            <div class="delete-stuff">
+                <button class="btn delete">Clear Completed Tasks</button>
+                <button class="btn delete" data-delete-list-button>Delete List</button>
+            </div>
         </div>
     </div>
     <script src="./index.bundle.js"></script>
